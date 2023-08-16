@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>812</width>
-    <height>600</height>
+    <width>1096</width>
+    <height>848</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,23 +17,23 @@
    <widget class="QStackedWidget" name="stacked_widget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
-      <width>781</width>
-      <height>551</height>
+      <x>50</x>
+      <y>20</y>
+      <width>991</width>
+      <height>771</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="page_login">
      <widget class="QFrame" name="frame_login_fundo">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>80</y>
-        <width>651</width>
-        <height>351</height>
+        <x>30</x>
+        <y>20</y>
+        <width>911</width>
+        <height>711</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -44,65 +44,26 @@
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="1">
-        <widget class="QLabel" name="label_incone_login">
-         <property name="text">
-          <string>Incine_login</string>
+        <widget class="QLabel" name="label_icone_login">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
          </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="line_edit_inserir_login">
          <property name="minimumSize">
           <size>
-           <width>0</width>
-           <height>0</height>
+           <width>100</width>
+           <height>100</height>
           </size>
          </property>
          <property name="text">
-          <string/>
-         </property>
-         <property name="echoMode">
-          <enum>QLineEdit::Normal</enum>
+          <string>Icone Login</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
-         <property name="placeholderText">
-          <string>Digite seu login</string>
-         </property>
         </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="line_edit_inserir_senha">
-         <property name="echoMode">
-          <enum>QLineEdit::Password</enum>
-         </property>
-         <property name="cursorPosition">
-          <number>0</number>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="placeholderText">
-          <string>Digite sua senha</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <spacer name="horizontalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-        </spacer>
        </item>
        <item row="0" column="0">
         <spacer name="horizontalSpacer">
@@ -111,19 +72,42 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>40</width>
+           <width>288</width>
            <height>20</height>
           </size>
          </property>
         </spacer>
        </item>
-       <item row="4" column="1">
-        <widget class="QPushButton" name="push_button_entrar">
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(170, 170, 255);</string>
+       <item row="0" column="2">
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>288</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="lineEdit_inserir_senha">
          <property name="text">
-          <string>ENTRAR</string>
+          <string>Inserir Senha</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="lineEdit_inserir_login">
+         <property name="text">
+          <string>Inserir Login</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -135,36 +119,57 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QPushButton" name="push_button_fecha_msg_erro">
-          <property name="geometry">
-           <rect>
-            <x>530</x>
-            <y>40</y>
-            <width>40</width>
-            <height>25</height>
-           </rect>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">background-color: rgb(170, 170, 255);</string>
-          </property>
-          <property name="text">
-           <string>X</string>
-          </property>
-         </widget>
          <widget class="QLabel" name="label_msg_erro">
           <property name="geometry">
            <rect>
-            <x>60</x>
+            <x>150</x>
             <y>40</y>
-            <width>451</width>
-            <height>25</height>
+            <width>341</width>
+            <height>31</height>
            </rect>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(255, 0, 0);</string>
           </property>
           <property name="text">
-           <string> Login ou senha invalidos!!!</string>
+           <string>Mensagem de erro</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_fechar_msg_erro">
+          <property name="geometry">
+           <rect>
+            <x>540</x>
+            <y>40</y>
+            <width>93</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(173, 169, 168);
+background-color: rgb(170, 170, 255);</string>
+          </property>
+          <property name="text">
+           <string>X</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="pushButton_entrar">
+          <property name="geometry">
+           <rect>
+            <x>320</x>
+            <y>190</y>
+            <width>291</width>
+            <height>28</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(173, 169, 168);
+background-color: rgb(170, 170, 255);</string>
+          </property>
+          <property name="text">
+           <string>Entrar</string>
           </property>
          </widget>
         </widget>
@@ -693,8 +698,8 @@
      <widget class="QFrame" name="frame_buttons">
       <property name="geometry">
        <rect>
-        <x>619</x>
-        <y>29</y>
+        <x>630</x>
+        <y>30</y>
         <width>131</width>
         <height>491</height>
        </rect>
