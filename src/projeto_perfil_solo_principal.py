@@ -13,6 +13,14 @@ class Projeto_perfil_solo_principal(Ui_MainWindow, QMainWindow):
         self.pushButton_entrar.clicked.connect(self.realizar_login)
         self.pushButton_fechar_msg_erro.clicked.connect(lambda : self.frame_msg_erro.hide())
         self.push_button_sair.clicked.connect(self.sair_sistema)
+        self.push_button_cadastrar.clicked.connect(self.page_de_cadastro)
+        self.push_button_listar.clicked.connect(self.page_de_listar)
+
+    def page_de_listar(self):
+        self.stacked_widget.setCurrentWidget(self.page_listar)   
+
+    def page_de_cadastro(self):
+        self.stacked_widget.setCurrentWidget(self.page_cadastrar)    
 
     def sair_sistema(self):
         self.stacked_widget.setCurrentWidget(self.page_login)
