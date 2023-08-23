@@ -1,7 +1,9 @@
 import sys
 
 from projeto_perfil_solo_base import Ui_MainWindow
-from PyQt6.QtWidgets import QMainWindow, QApplication
+from PyQt6.QtWidgets import QMainWindow, QApplication, QLabel
+from PyQt6.QtGui import QPixmap, QIcon
+from PyQt6.QtCore import Qt
 
 class Projeto_perfil_solo_principal(Ui_MainWindow, QMainWindow):
     
@@ -15,6 +17,13 @@ class Projeto_perfil_solo_principal(Ui_MainWindow, QMainWindow):
         self.push_button_sair.clicked.connect(self.sair_sistema)
         self.push_button_cadastrar.clicked.connect(self.page_de_cadastro)
         self.push_button_listar.clicked.connect(self.page_de_listar)
+
+        self.set_label_img(self.label_icone_login, 'img/icone_login.jpg')
+
+    def set_label_img(self, label: QLabel, end_img: str):
+        img = QPixmap(end_img)
+        img = img.scaled(label.width(), label.height(), Qt.AspectRatioMode.KeepAspectRatio)
+        label.setPixmap(img)
 
     def page_de_listar(self):
         self.stacked_widget.setCurrentWidget(self.page_listar)   
