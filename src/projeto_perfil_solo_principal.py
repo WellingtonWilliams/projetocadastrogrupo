@@ -19,6 +19,19 @@ class Projeto_perfil_solo_principal(Ui_MainWindow, QMainWindow):
         self.push_button_listar.clicked.connect(self.page_de_listar)
 
         self.set_label_img(self.label_icone_login, 'img/icone_login.jpg')
+        self.set_label_img(self.label_logo_empresa, 'img/icone_login_CLLW.png')
+        self.set_label_img(self.label_logo_empresa_2, 'img/icone_login_CLLW.png')
+
+    def set_label_img(self, label: QLabel, end_img: str):
+        img = QPixmap(end_img)
+        img = img.scaled(label.width(), label.height(), Qt.AspectRatioMode.KeepAspectRatio)
+        label.setPixmap(img)
+
+    def set_label_img(self, label: QLabel, end_img: str):
+        img = QPixmap(end_img)
+        img = img.scaled(label.width(), label.height(), Qt.AspectRatioMode.KeepAspectRatio)
+        label.setPixmap(img)
+
 
     def set_label_img(self, label: QLabel, end_img: str):
         img = QPixmap(end_img)
