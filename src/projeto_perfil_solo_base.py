@@ -318,6 +318,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         self.stacked_widget.setCurrentIndex(0)
+        self.push_button_fechar_msg_cadastro_invalido.clicked.connect(self.frame_msg_cadastro_invalido.hide) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
