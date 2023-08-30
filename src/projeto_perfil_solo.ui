@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page_login">
      <widget class="QFrame" name="frame_login_fundo">
@@ -802,22 +802,5 @@ background-color: rgb(255, 255, 255);</string>
   </widget>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>push_button_fechar_msg_cadastro_invalido</sender>
-   <signal>clicked()</signal>
-   <receiver>frame_msg_cadastro_invalido</receiver>
-   <slot>hide()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>881</x>
-     <y>136</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>793</x>
-     <y>103</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
