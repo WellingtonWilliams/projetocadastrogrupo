@@ -14,6 +14,7 @@ class Projeto_perfil_solo_principal(Ui_MainWindow, QMainWindow):
         super().setupUi(self)
         self.listar_perfil_solo = []
         self.frame_msg_erro.hide()
+        self.load_imgs()
         self.stacked_widget.setCurrentWidget(self.page_login)
         self.pushButton_entrar.clicked.connect(self.realizar_login)
         self.pushButton_fechar_msg_erro.clicked.connect(lambda : self.frame_msg_erro.hide())
@@ -21,8 +22,18 @@ class Projeto_perfil_solo_principal(Ui_MainWindow, QMainWindow):
         self.push_button_cadastrar.clicked.connect(self.page_de_cadastro)
         self.push_button_listar.clicked.connect(self.page_de_listar)
         self.push_button_salvar.clicked.connect(self.salvar_dados)
+        self.push_button_voltar.clicked.connect(self.voltar_page_principal)
+        self.push_button_voltar_2.clicked.connect(self.voltar_page_principal) 
 
+        #self.set_label_img(self.label_icone_login, 'img/icone_login.jpg')
+
+    def voltar_page_principal(self):
+        self.stacked_widget.setCurrentWidget(self.page_principal)
+
+    def load_imgs(self):
         self.set_label_img(self.label_icone_login, 'img/icone_login.jpg')
+        self.set_label_img(self.label_logo_empresa, 'img/icone_login_CLLW.png')
+        self.set_label_img(self.label_logo_empresa_2, 'img/icone_login_CLLW.png')
 
     def salvar_dados(self):
         codigo_de_serviço = self.line_edit_codigo_servio.text()
