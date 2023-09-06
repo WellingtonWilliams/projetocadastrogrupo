@@ -20,5 +20,5 @@ class Perfil_Solo:
         if codigo_de_serviço != None and len(codigo_de_serviço) != 0:
             self.error = 'O "codigo_de_serviço" é obrigatório'
         else:
-            self.__codigo_de_serviço = codigo_de_serviço            
-    
+            self.__codigo_de_serviço = codigo_de_serviço
+            
