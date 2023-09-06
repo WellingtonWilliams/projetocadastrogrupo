@@ -802,5 +802,22 @@ background-color: rgb(255, 255, 255);</string>
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>push_button_fechar_msg_cadastro_invalido</sender>
+   <signal>clicked()</signal>
+   <receiver>frame_msg_cadastro_invalido</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>870</x>
+     <y>142</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>913</x>
+     <y>119</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

@@ -37,7 +37,7 @@ class Projeto_perfil_solo_principal(Ui_MainWindow, QMainWindow):
 
     def salvar_dados(self):
         codigo_de_serviço = self.line_edit_codigo_servio.text()
-        tipo_de_solo = self.combo_box_tipo_solo.text()
+        tipo_de_solo = self.combo_box_tipo_solo.currentText()
         cor = self.line_edit_cor.text()
         estrutura = self.line_edit_estrutura.text()
         localização_área = self.line_edit_localizacao_area.text()
