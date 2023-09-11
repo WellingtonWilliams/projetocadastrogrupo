@@ -6,7 +6,9 @@ from PyQt6.QtGui import QPixmap
 from PyQt6.QtCore import Qt
 
 from modelo_cadastro.perfil_solo import Perfil_Solo
+from modelo_cadastro.usuario import Usuario
 from controle_cadastro.perfil_control import Perfil_Control
+from controle_cadastro.usuario_control import Usuario_Control
 
 class Projeto_perfil_solo_principal(Ui_MainWindow, QMainWindow):
     
@@ -14,8 +16,10 @@ class Projeto_perfil_solo_principal(Ui_MainWindow, QMainWindow):
         super().__init__(parent)
         super().setupUi(self)
         self.controle_perfil = Perfil_Control()
+        self.controle_usuario = Usuario_Control()
         self.load_imgs() # trocar
         self.inicializar_componentes()
+        self.inicializar_usuario()
         self.cor_erro = 'background-color: rgb(139, 0, 0); color: rgb(255, 255, 255)'
         self.cor_sucesso = 'background-color: rgb(51, 255, 51); color: rgb(255, 255, 255)'
 
@@ -43,11 +47,19 @@ class Projeto_perfil_solo_principal(Ui_MainWindow, QMainWindow):
         self.push_button_voltar_2.clicked.connect(self.acessar_principal)
         self.push_button_alterar.clicked.connect(self.alterar_dados)
         self.push_button_excluir.clicked.connect(self.excluir_perfil)
+    
+    def inicializar_usuario(self) -> None:
+        usuario_principal = Usuario()
+        usuario_principal.nome = 'Principal'
+        usuario_principal.user = 'cllw'
+        usuario_principal.senha_1 = '128167'
+        usuario_principal.senha_2 = '128167'
+        self.controle_usuario.adicionar_usuario(usuario_principal)
 
-    def realizar_login (self) -> None:
+    def realizar_login(self) -> None:
         login = self.lineEdit_inserir_login.text()
         senha = self.lineEdit_inserir_senha.text()
-        if login == 'cllw' and senha == '128167':
+        if self.controle_usuario.consultar_usuario(login, senha):
             self.lineEdit_inserir_login.setText('')
             self.lineEdit_inserir_senha.setText('')
             self.frame_msg_erro.hide()
